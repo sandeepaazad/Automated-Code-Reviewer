@@ -34,7 +34,6 @@ def format_feedback(feedback):
 
     return formatted_text
 
-# Example usage
 feedback = review_python_code(sample_code)
 print("Code Review Feedback:")
 print(format_feedback(feedback))
