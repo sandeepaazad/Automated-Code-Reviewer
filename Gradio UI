@@ -1,0 +1,12 @@
+# Gradio UI
+iface = gr.Interface(
+    fn=review_python_code,
+    inputs=gr.Textbox(label="Enter Python Code"),
+    outputs=gr.Textbox(label="Code Review Feedback"),
+    title="Automated Code Reviewer",
+    description="Paste your Python code, and the AI will analyze and review each function."
+)
+
+#Corrected the if statement condition
+if __name__ == "__main__":
+    iface.launch()
