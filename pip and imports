@@ -1,0 +1,18 @@
+Installation and Imports :-
+!pip install streamlit
+!pip install fastapi
+!pip install uvicorn
+!pip install multipart
+!pip install gradio
+import google.generativeai
+import streamlit
+import fastapi
+import uvicorn
+import multipart
+import spacy
+import nltk
+import transformers
+import langchain
+import textwrap
+import re
+import gradio as gr
