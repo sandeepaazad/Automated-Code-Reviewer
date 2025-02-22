@@ -1,0 +1,40 @@
+# Initialize Gemini model
+model = genai.GenerativeModel("gemini-pro")
+
+def review_python_code(code_snippet):
+    """
+    Reviews Python code using Google Gemini AI and NLP tools.
+    """
+    prompt = f"""
+    You are an AI code reviewer. Analyze the following Python code for syntax errors, logic issues,
+    best practices, and optimizations. Provide constructive feedback with examples for improvement.
+
+    Code:
+    ```python
+    {code_snippet}
+    ```
+    """
+    try:
+        response = model.generate_content(prompt)
+        return response.text
+    except Exception as e:
+        return f"Error: {e}"
+if __name__ == "__main__":
+    sample_code = """
+    def add_numbers(a, b):
+        return a + b
+
+    print(add_numbers(5, "10"))
+    """
+def format_feedback(feedback):
+    # Ensure each section starts on a new line
+    formatted_text = re.sub(r"\*\*(.*?)\*\*", r"\n\1\n", feedback)
+    formatted_text = formatted_text.replace("*", "-")  
+    formatted_text = "\n".join(line for line in formatted_text.split("\n") if line.strip())
+
+    return formatted_text
+
+# Example usage
+feedback = review_python_code(sample_code)
+print("Code Review Feedback:")
+print(format_feedback(feedback))
