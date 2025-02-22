@@ -1,0 +1,12 @@
+Features
+•Syntax Error Detection: Identifies syntax errors in Python code.
+•Logical Error Detection: Detects logical issues in the code.
+•Best Practices: Provides suggestions for improving code readability and maintainability.
+•Optimizations: Offers recommendations for optimizing code performance.
+•User-Friendly Interface: Built with Gradio, making it easy to use for developers of all levels.
+
+How It Works
+1.Code Input: Users paste their Python code into the Gradio interface.
+2.AI Analysis: The code is analyzed using Google Gemini AI and NLP tools.
+3.Feedback: The tool provides detailed feedback on syntax errors, logical issues, best practices, and optimizations.
+4.Improved Code: Suggestions for improved code are provided, along with explanations.
